@@ -1,0 +1,39 @@
+{
+  "name": "adapt_the_game_qa_agentic_solution",
+  "version": "1.0.0",
+  "description": "> Automated end-to-end QA framework for [Adapt the Game](https://www.adaptthegame.io/) built with **Playwright + TypeScript**, following the **Page Object Model (POM)** design pattern and **OOP principles**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:functional": "playwright test --grep @functional",
+    "test:regression": "playwright test --grep @regression",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:mobile": "playwright test --project=mobile-chrome --project=mobile-safari",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "lint:locators": "grep -rn 'page\\.locator\\|page\\.fill\\|page\\.click' tests/ --include='*.spec.ts' || echo 'No inline locator violations found'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qa-bob/adapt_the_game_QA_Agentic_Solution.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/qa-bob/adapt_the_game_QA_Agentic_Solution/issues"
+  },
+  "homepage": "https://github.com/qa-bob/adapt_the_game_QA_Agentic_Solution#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.2",
+    "typescript": "^6.0.3"
+  }
+}
